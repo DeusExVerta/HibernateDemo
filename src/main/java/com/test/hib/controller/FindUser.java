@@ -10,7 +10,7 @@ import com.test.hib.model.User;
 
 
 public class FindUser {
-	public static void main(String[] args) {
+	public static void findUser() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         

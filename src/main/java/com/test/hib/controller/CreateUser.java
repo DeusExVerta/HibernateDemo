@@ -11,7 +11,7 @@ import com.test.hib.model.User;
 
 
 public class CreateUser {
-	public static void main(String[] args) {
+	public static void createUsers() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         Transaction t = session.beginTransaction();

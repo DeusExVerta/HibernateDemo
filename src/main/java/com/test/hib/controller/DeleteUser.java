@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import com.test.hib.model.User;
 
 public class DeleteUser {
-	public static void main(String[] args) {
+	public static void deleteUser() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         

@@ -5,7 +5,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class CreateUserTable {
-   public static void main(String[] args) {
+   public static void createUserTables() {
        SessionFactory factory = new Configuration().configure().buildSessionFactory();
        Session session = factory.openSession();
        Transaction t = session.beginTransaction();
