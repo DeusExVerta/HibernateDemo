@@ -13,18 +13,15 @@ public class Application {
 			CreateUser.createUsers();
 			//this line calls the static method deleteUser from the DeleteUser Class
 	  		DeleteUser.deleteUser();
-	  		
+	
+			Scanner sc = new Scanner(System.in);
 			//using the alternative non-static UserTableActions implementation. 
-			UserTableActions uta = new UserTableActions();
+			UserTableActions uta = new UserTableActions(sc);
 			uta.createUsers();
 			//this gets the the user with the specified ID
 			System.out.print("Enter user ID to lookup:");
-			int i = 1;
-			try(Scanner sc = new Scanner(System.in))
-			{
-				 i = sc.nextInt();
-			}
-			System.out.println(uta.getUser(i).getFullname());
+			int i = sc.nextInt();
+			System.out.println(uta.getUser(i));
 			uta.close();
   }
 }

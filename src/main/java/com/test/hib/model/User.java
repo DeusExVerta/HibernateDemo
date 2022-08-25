@@ -71,5 +71,11 @@ public class User {
 		this.salary = salary;
 	}
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", fullname=" + fullname + ", email=" + email + ", password=" + password + ", city="
+				+ city + ", age=" + age + ", salary=" + salary + "]";
+	}
+	
 	
 }
