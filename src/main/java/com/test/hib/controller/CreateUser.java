@@ -34,7 +34,7 @@ public class CreateUser {
         	sc.nextLine();
         	System.out.print("Enter City:");
         	user.setCity(sc.nextLine());
-        	session.save(user);
+        	session.persist(user);
         	System.out.print("Enter another user?(y to continue)");
         	cont = sc.nextLine().toLowerCase().matches("^y.*");
         }while(cont);

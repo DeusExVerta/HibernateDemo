@@ -21,8 +21,8 @@ public class DeleteUser {
         	System.out.print("Enter u-id to lookup:");
         	id=sc.nextInt();
         	try {
-	        	User u = session.load(User.class, id);
-	        	session.delete(u);
+	        	User u = session.get(User.class, id);
+	        	session.remove(u);
         	}catch(org.hibernate.ObjectNotFoundException ex) 
         	{
         		System.out.println(ex.getMessage());

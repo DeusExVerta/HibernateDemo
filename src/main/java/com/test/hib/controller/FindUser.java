@@ -22,7 +22,7 @@ public class FindUser {
         	System.out.print("Enter u-id to lookup:");
         	id=sc.nextInt();
         	try {
-	        	User u = session.load(User.class, id);
+	        	User u = session.get(User.class, id);
 	        	System.out.println("Name: "+u.getFullname());
 	        	System.out.println("Email: "+u.getEmail());
 	        	System.out.println("Password: "+u.getPassword());
